@@ -10,6 +10,8 @@ export class DataService {
     return JSON.parse(localStorage.getItem('visitors'));
   }
   saveVisitor(visitor: any) {
+    const currentDate = new Date().toUTCString().split('').slice(0,12).join('').trim();
+    visitor.date = currentDate;
     const visitors = this.getAllVisitors();
     if (visitors !== null) {
       visitors.push(visitor);
