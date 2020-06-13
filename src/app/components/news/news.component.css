@@ -1,0 +1,39 @@
+h2 {
+    text-align: center;
+    color: #444;
+    font-size: 26px;
+    font-weight: bold;
+}
+.news-item {
+    margin: 10px auto;
+    height: 100px;
+    background-color: #444;
+    overflow-y: hidden;
+}
+.news-img {
+    display: inline-block;
+    max-width: 120px;
+}
+img {
+    max-width: 100px;
+    max-height: 90px;
+    margin: 5px;
+}
+
+.news-text {
+    display: inline-block;
+    max-width: 75%;
+    margin-left: 20px;
+    height: 100px;
+    vertical-align: text-bottom;
+    color: white;
+}
+.news-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.news-desc {
+    font-size: 12px;
+    margin-top: 10px;
+}

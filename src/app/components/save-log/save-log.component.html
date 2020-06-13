@@ -1,0 +1,51 @@
+<div class="container">
+  <h2>ADD VISITOR</h2>
+  <form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit(form.value)"
+    class="visitor-form"
+  >
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Name" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Email Address" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Purpose of Visit</mat-label>
+      <mat-select formControlName="visitType"> 
+        <mat-option value="meeting">Meeting</mat-option>
+        <mat-option value="delivery">Delivery</mat-option>
+        <mat-option value="personal">Personal</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Person to visit" formControlName="person" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input
+        matInput
+        placeholder="Date Of Entry"
+        formControlName="date"
+        disabled
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Entry Time" formControlName="entryTime" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Exit Time" formControlName="exitTime" />
+    </mat-form-field>
+
+    <div class="example-full-width submit-btn">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!form.valid"
+      >
+        Submit Form
+      </button>
+    </div>
+  </form>
+</div>

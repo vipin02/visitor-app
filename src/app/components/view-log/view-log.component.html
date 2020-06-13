@@ -1,0 +1,7 @@
+<div *ngIf="!novisit">
+    <h2>RECENT VISITORS</h2>
+    <p *ngFor="let visitor of visitors,let idx = index">
+        {{idx+1}}. {{visitor.name}} visited {{visitor.person}} on {{visitor.date}} from {{visitor.entryTime}} to {{visitor.exitTime}} 
+    </p>
+</div>
+<p *ngIf="novisit" class="no-visit">No recent Visits</p>

@@ -1,0 +1,15 @@
+<div class="" *ngIf="newsError===''">
+  <h2>LATEST NEWS</h2>
+  <div *ngFor="let el of news" class="news-item">
+    <div class="news-img">
+      <a [href]="el.url" target="_blank">
+        <img [src]="el.urlToImage" />
+      </a>
+    </div>
+    <div class="news-text">
+      <div class="news-title">{{ el.title }}</div>
+      <p class="news-desc">{{ el.description }}</p>
+    </div>
+  </div>
+</div>
+<p *ngIf="newsError!==''">{{newsError}}</p>
